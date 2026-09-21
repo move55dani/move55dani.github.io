@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全职-职场人自由职业与远程工作指南</title>
+    <meta name="description" content="全职-提供全面的自由职业、远程办公与兼职工作指南。涵盖自由职业者接单技巧、远程工作平台推荐、全职转兼职策略及行业趋势分析。">
+    <meta name="keywords" content="全职,自由职业,远程工作,兼职,接单,远程办公,副业">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary-color: #f59e0b;
+            --text-main: #1f2937;
+            --text-secondary: #4b5563;
+            --bg-body: #f3f4f6;
+            --bg-card: #ffffff;
+            --border-color: #e5e7eb;
+            --max-width: 1200px;
+            --header-height: 70px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 60px 0;
+        }
+
+        .grid {
+            display: grid;
+            gap: 24px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-card);
+            height: var(--header-height);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+            font-size: 0.95rem;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 32px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.8);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .search-box {
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 14px 20px;
+            padding-right: 50px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .search-box input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .search-box button {
+            position: absolute;
+            right: 8px;
+            top: 6px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        /* Stats Section */
+        .stats-bar {
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border-color);
+            padding: 24px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .stat-item p {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        /* Main Content Layout */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 30px;
+        }
+
+        /* Article List */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            position: relative;
+            padding-left: 16px;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 24px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .article-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-image {
+            height: 200px;
+            background-color: #e5e7eb;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .article-card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .card-content {
+            padding: 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-meta {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            display: flex;
+            gap: 12px;
+        }
+
+        .card-meta span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .card-excerpt {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border-color);
+            padding-top: 16px;
+        }
+
+        .author-info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #d1d5db;
+        }
+
+        .author-name {
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .read-time {
+            font-size: 0.8rem;
+            color: #9ca3af;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 24px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 24px;
+        }
+
+        .widget-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .category-list li {
+            margin-bottom: 10px;
+        }
+
+        .category-list a {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .category-list a:hover {
+            color: var(--primary-color);
+        }
+
+        .category-count {
+            background: #f3f4f6;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.75rem;
+        }
+
+        .guide-list {
+            counter-reset: guide-counter;
+        }
+
+        .guide-list li {
+            position: relative;
+            padding-left: 32px;
+            margin-bottom: 16px;
+        }
+
+        .guide-list li::before {
+            counter-increment: guide-counter;
+            content: counter(guide-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .guide-list a {
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .guide-list a:hover {
+            color: var(--primary-color);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(to right, #1e3a8a, #2563eb);
+            color: white;
+            text-align: center;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        .cta-section h2 {
+            font-size: 1.75rem;
+            margin-bottom: 12px;
+        }
+
+        .cta-section p {
+            opacity: 0.9;
+            margin-bottom: 24px;
+        }
+
+        .cta-section .btn-white {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .cta-section .btn-white:hover {
+            background: #f9fafb;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: var(--bg-card);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .faq-question:hover {
+            background-color: #f9fafb;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        .icon-plus {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.2s;
+        }
+
+        .faq-item.active .icon-plus {
+            transform: rotate(45deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111827;
+            color: #d1d5db;
+            padding: 60px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand p {
+            margin-top: 16px;
+            font-size: 0.9rem;
+            color: #9ca3af;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .nav-menu {
+                display: none; /* Simplified for mobile */
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                <span>全职</span>指南
+            </a>
+            <nav class="nav-menu">
+                <a href="#" class="active">首页</a>
+                <a href="#">自由职业</a>
+                <a href="#">远程办公</a>
+                <a href="#">副业指南</a>
+                <a href="#">职场转型</a>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-outline">登录</button>
+                <button class="btn btn-primary">注册</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>探索全职之外的无限可能</h1>
+                <p>从全职到自由职业，从办公室到远程办公，我们为您提供全方位的职业转型指南、接单平台推荐与行业趋势分析。</p>
+                
+                <div class="hero-tags">
+                    <span class="tag">自由职业接单</span>
+                    <span class="tag">远程工作机会</span>
+                    <span class="tag">副业赚钱</span>
+                    <span class="tag">时间自由</span>
+                </div>
+
+                <div class="search-box">
+                    <input type="text" placeholder="搜索行业、技能或平台...">
+                    <button aria-label="搜索">🔍</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-bar">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>500+</h3>
+                        <p>合作平台</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>10w+</h3>
+                        <p>自由职业者</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>200+</h3>
+                        <p>服务行业</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>24h</h3>
+                        <p>在线支持</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container" style="margin-top: 40px;">
+            <div class="main-layout">
+                <!-- Main Content Area -->
+                <div class="content-area">
+                    <div class="section-header">
+                        <h2 class="section-title">热门趋势与深度解读</h2>
+                        <a href="#" style="color: var(--primary-color); font-size: 0.9rem;">查看更多 →</a>
+                    </div>
+
+                    <div class="grid">
+                        <!-- Article 1 -->
+                        <article class="article-card">
+                            <div class="card-image">
+                                <img src="https://picsum.photos/seed/remote1/600/400" alt="远程工作">
+                                <span class="card-badge">远程办公</span>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-meta">
+                                    <span>📅 2023-10-24</span>
+                                    <span>👁️ 1.2k 阅读</span>
+                                </div>
+                                <h3 class="card-title"><a href="#">2024年最值得关注的远程工作平台排行榜</a></h3>
+                                <p class="card-excerpt">随着数字化转型的深入，越来越多的企业开始接受远程办公模式。本文为您深度解析全球及国内主流远程工作平台的优劣势，帮助您找到最适合自己的工作场所。</p>
+                                <div class="card-footer">
+                                    <div class="author-info">
+                                        <img src="https://picsum.photos/seed/u1/50/50" alt="Avatar" class="avatar">
+                                        <span class="author-name">职场观察家</span>
+                                    </div>
+                                    <span class="read-time">8 分钟阅读</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Article 2 -->
+                        <article class="article-card">
+                            <div class="card-image">
+                                <img src="https://picsum.photos/seed/freelance2/600/400" alt="自由职业">
+                                <span class="card-badge">自由职业</span>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-meta">
+                                    <span>📅 2023-10-22</span>
+                                    <span>👁️ 856 阅读</span>
+                                </div>
+                                <h3 class="card-title"><a href="#">如何利用AI工具提升全职转兼职的效率？</a></h3>
+                                <p class="card-excerpt">在人工智能飞速发展的今天，掌握AI工具已成为职场人的必修课。本文将介绍几款实用的AI工具，帮助您在保持全职工作的同时，高效开展副业。</p>
+                                <div class="card-footer">
+                                    <div class="author-info">
+                                        <img src="https://picsum.photos/seed/u2/50/50" alt="Avatar" class="avatar">
+                                        <span class="author-name">科技前沿</span>
+                                    </div>
+                                    <span class="read-time">5 分钟阅读</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Article 3 -->
+                        <article class="article-card">
+                            <div class="card-image">
+                                <img src="https://picsum.photos/seed/side3/600/400" alt="副业">
+                                <span class="card-badge">副业指南</span>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-meta">
+                                    <span>📅 2023-10-20</span>
+                                    <span>👁️ 2.1k 阅读</span>
+                                </div>
+                                <h3 class="card-title"><a href="#">全职人员的“睡后收入”构建指南</a></h3>
+                                <p class="card-excerpt">不想让薪水成为唯一的收入来源？本文将为您详细拆解适合全职人群的“睡后收入”模式，包括内容创作、数字产品销售与投资理财的入门建议。</p>
+                                <div class="card-footer">
+                                    <div class="author-info">
+                                        <img src="https://picsum.photos/seed/u3/50/50" alt="Avatar" class="avatar">
+                                        <span class="author-name">财富自由之路</span>
+                                    </div>
+                                    <span class="read-time">10 分钟阅读</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div style="margin-top: 40px; text-align: center;">
+                        <button class="btn btn-outline" style="width: 100%; max-width: 200px;">加载更多文章</button>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <!-- CTA Widget -->
+                    <div class="cta-section">
+                        <h2>准备好开启新职业了吗？</h2>
+                        <p>加入我们，获取最新的接单机会和行业资讯。</p>
+                        <button class="btn btn-white">立即加入</button>
+                    </div>
+
+                    <!-- Categories Widget -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">热门分类</h3>
+                        <ul class="category-list">
+                            <li><a href="#">设计师接单 <span class="category-count">120</span></a></li>
+                            <li><a href="#">程序员远程 <span class="category-count">85</span></a></li>
+                            <li><a href="#">文案写作 <span class="category-count">64</span></a></li>
+                            <li><a href="#">翻译服务 <span class="category-count">42</span></a></li>
+                            <li><a href="#">视频剪辑 <span class="category-count">38</span></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Quick Guides Widget -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">新手必读</h3>
+                        <ul class="guide-list">
+                            <li><a href="#">全职转自由职业的心理建设</a></li>
+                            <li><a href="#">如何建立个人专业品牌</a></li>
+                            <li><a href="#">接单平台避坑指南</a></li>
+                            <li><a href="#">远程工作必备工具箱</a></li>
+                            <li><a href="#">税务与社保处理方案</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- FAQ Widget -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">常见问题</h3>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                全职转自由职业风险大吗？
+                                <svg class="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                            </div>
+                            <div class="faq-answer">
+                                转型风险取决于您的准备情况。拥有稳定客户基础、明确技能定位和财务储备可以大大降低风险。建议先从副业开始尝试，逐步过渡。
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                在哪里可以找到靠谱的远程工作？
+                                <svg class="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                            </div>
+                            <div class="faq-answer">
+                                目前主流的远程工作平台包括Upwork、Fiverr、猪八戒网、码市等。此外，关注招聘网站的远程岗位也是不错的选择。
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <span>全职</span>指南
+                    </a>
+                    <p>致力于为职场人提供自由职业、远程办公及副业发展的实用指南与资源平台，帮助您实现工作与生活的平衡。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">平台介绍</a></li>
+                        <li><a href="#">加入团队</a></li>
+                        <li><a href="#">联系方式</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>资源中心</h4>
+                    <ul>
+                        <li><a href="#">行业报告</a></li>
+                        <li><a href="#">工具下载</a></li>
+                        <li><a href="#">社区论坛</a></li>
+                        <li><a href="#">活动日历</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">新浪微博</a></li>
+                        <li><a href="#">知乎专栏</a></li>
+                        <li><a href="#">B站视频</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 全职指南 版权所有. 本站内容仅供学习交流使用，不代表任何投资建议。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Toggle Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Mobile Menu Toggle (Basic implementation)
+            const headerActions = document.querySelector('.header-actions');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            // In a real scenario, we'd add a hamburger button, 
+            // for this showcase, we keep it simple or assume desktop focus primarily.
+        });
+    </script>
+</body>
+                  </html>
