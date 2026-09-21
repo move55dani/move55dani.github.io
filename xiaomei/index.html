@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="小妹 - 专注年轻女性生活方式、时尚穿搭、美妆护肤及情感资讯的综合性平台，为您提供实用的生活建议与潮流趋势。">
+    <meta name="keywords" content="小妹, 年轻女性, 时尚穿搭, 美妆护肤, 情感生活, 生活方式">
+    <title>小妹-年轻女性的时尚生活与潮流指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff6b81;
+            --secondary-color: #ff9eb5;
+            --bg-color: #fdf6f8;
+            --card-bg: #ffffff;
+            --text-main: #2d3436;
+            --text-sub: #636e72;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+            --radius: 12px;
+            --shadow: 0 4px 12px rgba(255, 107, 129, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 头部导航 */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 16px;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -24px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--primary-color);
+            border-radius: 3px 3px 0 0;
+        }
+
+        .search-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: var(--text-main);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 40px 0;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 24px;
+        }
+
+        .hero-card {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            height: 400px;
+            box-shadow: var(--shadow);
+        }
+
+        .hero-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .hero-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .hero-tag {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 107, 129, 0.9);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            color: white;
+            z-index: 2;
+        }
+
+        .hero-content h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-content p {
+            font-size: 14px;
+            opacity: 0.9;
+            max-width: 80%;
+        }
+
+        /* 侧边栏 */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .mini-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .mini-card h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--bg-color);
+            color: var(--primary-color);
+        }
+
+        .hot-list li {
+            margin-bottom: 12px;
+        }
+
+        .hot-list a {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            color: var(--text-sub);
+        }
+
+        .hot-list a:hover {
+            color: var(--primary-color);
+        }
+
+        .hot-rank {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        /* 分类导航 */
+        .category-nav {
+            padding: 30px 0;
+            background: white;
+            margin-top: 10px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .cat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .cat-item {
+            padding: 15px;
+            border-radius: 8px;
+            transition: background 0.3s;
+            cursor: pointer;
+        }
+
+        .cat-item:hover {
+            background: var(--bg-color);
+        }
+
+        .cat-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 10px;
+            background: rgba(255, 107, 129, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: var(--primary-color);
+        }
+
+        .cat-item h4 {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        /* 内容区 */
+        .section-title {
+            font-size: 24px;
+            margin: 40px 0 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 24px;
+            background: var(--primary-color);
+            border-radius: 3px;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .article-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(255, 107, 129, 0.2);
+        }
+
+        .card-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-tag {
+            font-size: 12px;
+            color: var(--primary-color);
+            background: rgba(255, 107, 129, 0.1);
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .card-excerpt {
+            font-size: 14px;
+            color: var(--text-sub);
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #b2bec3;
+            border-top: 1px solid #f1f2f6;
+            padding-top: 12px;
+        }
+
+        /* 特色板块 */
+        .feature-section {
+            background: linear-gradient(135deg, #fff0f3 0%, #ffffff 100%);
+            padding: 50px 0;
+            margin: 40px 0;
+            border-radius: var(--radius);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-icon-box {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            font-size: 32px;
+        }
+
+        .feature-item h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            color: var(--text-sub);
+            font-size: 14px;
+        }
+
+        /* 页脚 */
+        footer {
+            background: #2d3436;
+            color: #dfe6e9;
+            padding: 60px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand p {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #b2bec3;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #b2bec3;
+            font-size: 14px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #636e72;
+            font-size: 13px;
+            color: #636e72;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-card {
+                height: 300px;
+            }
+
+            .sidebar {
+                display: none;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>小妹</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">穿搭</a></li>
+                    <li><a href="#">美妆</a></li>
+                    <li><a href="#">情感</a></li>
+                    <li><a href="#">家居</a></li>
+                    <li><a href="#">好物推荐</a></li>
+                </ul>
+            </nav>
+            <button class="search-btn" aria-label="搜索">🔍</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <article class="hero-card">
+                <span class="hero-tag">今日热点</span>
+                <img src="https://picsum.photos/seed/fashion/800/600" alt="春季穿搭指南">
+                <div class="hero-content">
+                    <h2>2024春季通勤穿搭指南：简约不简单</h2>
+                    <p>告别沉闷，用三件单品轻松打造职场高级感，探索色彩与版型的完美平衡。</p>
+                </div>
+            </article>
+            
+            <aside class="sidebar">
+                <div class="mini-card">
+                    <h3>🔥 热门话题</h3>
+                    <ul class="hot-list">
+                        <li><a href="#"><span>早八人妆容速成法</span> <span class="hot-rank">1</span></a></li>
+                        <li><a href="#"><span>平价好物分享</span> <span class="hot-rank">2</span></a></li>
+                        <li><a href="#"><span>独居女孩的安全感</span> <span class="hot-rank">3</span></a></li>
+                        <li><a href="#"><span>显瘦穿搭技巧</span> <span class="hot-rank">4</span></a></li>
+                        <li><a href="#"><span>周末去哪儿玩</span> <span class="hot-rank">5</span></a></li>
+                    </ul>
+                </div>
+                <div class="mini-card">
+                    <h3>✨ 每日一句</h3>
+                    <p style="font-size: 14px; color: var(--text-sub); font-style: italic;">
+                        “保持热爱，奔赴山海。”
+                    </p>
+                </div>
+            </aside>
+        </section>
+
+        <!-- 分类导航 -->
+        <section class="category-nav">
+            <div class="cat-grid">
+                <div class="cat-item">
+                    <div class="cat-icon">👗</div>
+                    <h4>时尚穿搭</h4>
+                </div>
+                <div class="cat-item">
+                    <div class="cat-icon">💄</div>
+                    <h4>美妆护肤</h4>
+                </div>
+                <div class="cat-item">
+                    <div class="cat-icon">🏠</div>
+                    <h4>家居生活</h4>
+                </div>
+                <div class="cat-item">
+                    <div class="cat-icon">📚</div>
+                    <h4>情感心理</h4>
+                </div>
+                <div class="cat-item">
+                    <div class="cat-icon">🍳</div>
+                    <h4>美食烹饪</h4>
+                </div>
+                <div class="cat-item">
+                    <div class="cat-icon">✈️</div>
+                    <h4>旅行攻略</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- 特色板块 -->
+        <section class="feature-section">
+            <div class="container">
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon-box">🌟</div>
+                        <h4>精选推荐</h4>
+                        <p>每日更新最符合当下趋势的优质内容，助你发现美好。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon-box">💬</div>
+                        <h4>互动社区</h4>
+                        <p>在这里分享你的生活，与百万用户交流心得。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon-box">🛍️</div>
+                        <h4>好物商城</h4>
+                        <p>严选好物，品质生活，从指尖开始。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 最新文章 -->
+        <h2 class="section-title">最新资讯</h2>
+        <section class="grid-layout">
+            <article class="article-card">
+                <div class="card-img">
+                    <img src="https://picsum.photos/seed/makeup/400/300" alt="底妆教程">
+                </div>
+                <div class="card-body">
+                    <span class="card-tag">美妆</span>
+                    <h3 class="card-title">新手必看：打造清透伪素颜底妆的三个关键</h3>
+                    <p class="card-excerpt">很多人觉得底妆厚重，其实关键在于妆前保湿和粉底的选择。本文教你如何避开卡粉误区，打造一整天持妆的清透底妆。</p>
+                    <div class="card-meta">
+                        <span>2023-10-24</span>
+                        <span>阅读 1.2k</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <div class="card-img">
+                    <img src="https://picsum.photos/seed/home/400/300" alt="家居布置">
+                </div>
+                <div class="card-body">
+                    <span class="card-tag">家居</span>
+                    <h3 class="card-title">小户型改造：低成本提升空间感的10个技巧</h3>
+                    <p class="card-excerpt">空间小不是问题，关键在于布局。利用镜子、收纳盒和色彩搭配，让你的小窝瞬间变大。</p>
+                    <div class="card-meta">
+                        <span>2023-10-23</span>
+                        <span>阅读 856</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <div class="card-img">
+                    <img src="https://picsum.photos/seed/food/400/300" alt="下午茶">
+                </div>
+                <div class="card-body">
+                    <span class="card-tag">美食</span>
+                    <h3 class="card-title">周末宅家：自制低卡路里下午茶甜品</h3>
+                    <p class="card-excerpt">想解馋又怕胖？试试这款空气炸锅版舒芙蕾，低糖低脂，口感却一点也不输给甜品店。</p>
+                    <div class="card-meta">
+                        <span>2023-10-22</span>
+                        <span>阅读 2.3k</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <div class="card-img">
+                    <img src="https://picsum.photos/seed/travel/400/300" alt="旅行">
+                </div>
+                <div class="card-body">
+                    <span class="card-tag">旅行</span>
+                    <h3 class="card-title">江浙沪周边游：被低估的绝美古镇推荐</h3>
+                    <p class="card-excerpt">避开人山人海，去这些小众古镇感受慢生活。这里有清晨的薄雾和夜晚的灯笼。</p>
+                    <div class="card-meta">
+                        <span>2023-10-21</span>
+                        <span>阅读 3.1k</span>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- 专题推荐 -->
+        <h2 class="section-title">专题精选</h2>
+        <section class="grid-layout">
+            <article class="article-card" style="grid-column: span 2;">
+                <div class="card-img" style="height: 350px;">
+                    <img src="https://picsum.photos/seed/winter/800/400" alt="冬季护肤">
+                </div>
+                <div class="card-body">
+                    <span class="card-tag">护肤</span>
+                    <h3 class="card-title">深度解析：换季敏感肌如何科学修护？</h3>
+                    <p class="card-excerpt">随着气温变化，皮肤屏障功能减弱，容易出现泛红、干痒。本文从清洁、保湿到修护，全方位解答你的护肤疑惑，让你安稳度过换季期。</p>
+                    <div class="card-meta">
+                        <span>编辑推荐</span>
+                        <span>阅读 5.4k</span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="article-card">
+                <div class="card-img" style="height: 350px;">
+                    <img src="https://picsum.photos/seed/smartphone/400/400" alt="数码">
+                </div>
+                <div class="card-body">
+                    <span class="card-tag">数码</span>
+                    <h3 class="card-title">学生党必看：高性价比手机选购清单</h3>
+                    <p class="card-excerpt">预算有限，如何买到性能与颜值兼备的手机？我们为你整理了不同价位段的最佳选择。</p>
+                    <div class="card-meta">
+                        <span>科技评测</span>
+                        <span>阅读 1.8k</span>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo" style="font-size: 28px;">小妹</a>
+                    <p>专注于年轻女性的生活方式分享平台，为您提供实用的穿搭建议、美妆教程和生活指南。让每一天都更加精致。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">品牌故事</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">联系方式</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>内容频道</h4>
+                    <ul>
+                        <li><a href="#">时尚穿搭</a></li>
+                        <li><a href="#">美妆护肤</a></li>
+                        <li><a href="#">情感生活</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">新浪微博</a></li>
+                        <li><a href="#">小红书</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 小妹生活指南 版权所有 | 隐私政策 | 服务条款</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
