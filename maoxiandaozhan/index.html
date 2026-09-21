@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="冒险岛战神攻略网提供最全的冒险岛战神职业解析、技能加点、装备搭配、属性加点及实战技巧，助你打造最强战神。">
+    <meta name="keywords" content="冒险岛战神攻略,冒险岛战神加点,冒险岛战神装备,冒险岛战神技能">
+    <title>冒险岛战神攻略-职业定位、技能加点与终极装备搭配指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d4a017; /* 战神金 */
+            --secondary-color: #1a1a2e; /* 深蓝黑 */
+            --accent-color: #e94560; /* 热血红 */
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-body: #f4f6f9;
+            --bg-card: #ffffff;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            margin-bottom: var(--spacing-unit);
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 24px;
+            background-color: var(--accent-color);
+            margin-right: 10px;
+            border-radius: 2px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: white;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            color: #ddd;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #2a2a4e 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiIHN0cm9rZS13aWR0aD0iMSI+PHBhdGggZD0iTTAgNDBMMTQwIDBIMjBMMjAgNDBIMTBMMzAgMjBaIi8+PC9zdmc+');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #ffb700;
+            transform: translateY(-2px);
+        }
+
+        /* Main Layout */
+        main {
+            padding: 40px 0;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .grid-layout {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Content Cards */
+        .card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: box-shadow 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .skill-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-item {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            padding: 15px 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .skill-item:hover {
+            border-color: var(--primary-color);
+            background: #fffbf0;
+        }
+
+        .skill-icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .skill-name {
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .skill-desc {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-top: 5px;
+        }
+
+        /* Stats Table */
+        .stats-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+
+        .stats-table th, .stats-table td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .stats-table th {
+            color: var(--text-light);
+            font-weight: normal;
+            width: 40%;
+        }
+
+        .stats-table td {
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 25px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .sidebar-widget h3 {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background: #f0f0f0;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: var(--text-main);
+        }
+
+        .tag:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Build Recommendation */
+        .build-option {
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        .build-option h4 {
+            color: var(--accent-color);
+            margin-bottom: 5px;
+        }
+
+        .build-option p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            color: var(--secondary-color);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .faq-answer {
+            margin-top: 10px;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            display: none; /* JS toggle */
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-item:not(.active) .faq-question::after {
+            content: '+';
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #aaa;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-content">
+        <a href="#" class="logo">
+            <span>⚔️</span> 战神攻略网
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#skills">技能加点</a></li>
+                <li><a href="#builds">流派推荐</a></li>
+                <li><a href="#gear">装备搭配</a></li>
+                <li><a href="#faq">常见问题</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container hero-content">
+        <h1>打造最强战神：从入门到精通</h1>
+        <p>提供最全面的冒险岛战神攻略，包括核心技能解析、主流流派推荐、毕业装备搭配及属性加点指南。</p>
+        <a href="#builds" class="btn">查看推荐加点</a>
+    </div>
+</section>
+
+<main class="container">
+    <div class="grid-layout">
+        <!-- Left Column: Main Content -->
+        <div class="content-col">
+            
+            <!-- Intro Section -->
+            <section class="card">
+                <h3>职业定位：近战物理输出</h3>
+                <p>战神（Warrior）是冒险岛中极具爆发力和生存能力的近战职业，属于战士三大系之一。其核心特点在于拥有极高的物理攻击力和技能连击能力，能够在短时间内造成巨额伤害。</p>
+                <p>战神在群怪方面表现优异，尤其是拥有“连击”技能后，可以快速清理大量怪物，是练级和打BOSS的热门选择。无论是追求极致的爆发输出，还是享受连击的快感，战神都是值得投入的职业。</p>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills">
+                <h2 class="section-title">核心技能加点指南</h2>
+                <div class="card">
+                    <p style="margin-bottom: 15px; color: #666;">战神的技能加点主要取决于你的玩法流派（如力量型、敏捷型或混合型）以及当前版本的主流配置。以下为通用核心技能建议：</p>
+                    <div class="skill-list">
+                        <div class="skill-item" onclick="showSkillDetail('旋风斩', '群攻核心技能，练级必备。')">
+                            <span class="skill-icon">🌪️</span>
+                            <div class="skill-name">旋风斩</div>
+                            <div class="skill-desc">群攻核心</div>
+                        </div>
+                        <div class="skill-item" onclick="showSkillDetail('连击', '战神招牌技能，叠加攻击力。')">
+                            <span class="skill-icon">⚔️</span>
+                            <div class="skill-name">连击</div>
+                            <div class="skill-desc">招牌技能</div>
+                        </div>
+                        <div class="skill-item" onclick="showSkillDetail('战神之魂', '被动提升攻击力与暴击。')">
+                            <span class="skill-icon">🔥</span>
+                            <div class="skill-name">战神之魂</div>
+                            <div class="skill-desc">被动增伤</div>
+                        </div>
+                        <div class="skill-item" onclick="showSkillDetail('战神冲锋', '位移+伤害，PVP神器。')">
+                            <span class="skill-icon">🚀</span>
+                            <div class="skill-name">冲锋</div>
+                            <div class="skill-desc">位移技能</div>
+                        </div>
+                        <div class="skill-item" onclick="showSkillDetail('毁灭打击', '单体高伤，BOSS战关键。')">
+                            <span class="skill-icon">💥</span>
+                            <div class="skill-name">毁灭打击</div>
+                            <div class="skill-desc">BOSS技能</div>
+                        </div>
+                        <div class="skill-item" onclick="showSkillDetail('旋风之舞', '高阶群攻，爆发提升。')">
+                            <span class="skill-icon">🌀</span>
+                            <div class="skill-name">旋风之舞</div>
+                            <div class="skill-desc">进阶群攻</div>
+                        </div>
+                    </div>
+                    <div id="skill-detail" style="margin-top: 15px; padding: 10px; background: #fff8e1; border-radius: 4px; font-size: 0.9rem; display: none;">
+                        <strong>技能详情：</strong> <span id="skill-text"></span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Build Section -->
+            <section id="builds">
+                <h2 class="section-title">主流流派推荐</h2>
+                <div class="card">
+                    <h3>1. 力量型战神 (STR Build)</h3>
+                    <p><strong>特点：</strong> 追求极致的物理攻击力，单体爆发最高。</p>
+                    <p><strong>加点策略：</strong> 属性点主要加在力量上，敏捷保持在能够使用装备和技能的最低要求（通常为100或150），剩余点数加运气或力量。核心装备选择力量加成最高的。</p>
+                    <p><strong>适用场景：</strong> 单体BOSS挑战、高难度副本。</p>
+                    
+                    <h3>2. 敏捷型战神 (DEX Build)</h3>
+                    <p><strong>特点：</strong> 拥有较高的物理防御和闪避率，生存能力强。</p>
+                    <p><strong>加点策略：</strong> 属性点主要加在敏捷上，运气或力量作为辅助。敏捷型战神通常拥有更好的操作手感，容错率较高。</p>
+                    <p><strong>适用场景：</strong> 群体刷怪、长时间练级、不喜欢频繁吃药的玩家。</p>
+                </div>
+            </section>
+
+            <!-- Gear Section -->
+            <section id="gear">
+                <h2 class="section-title">装备与属性搭配</h2>
+                <div class="card">
+                    <table class="stats-table">
+                        <thead>
+                            <tr>
+                                <th>部位</th>
+                                <th>推荐属性/装备</th>
+                                <th>优先级</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>武器</th>
+                                <td>高力量加成、暴击率、暴击伤害</td>
+                                <td>⭐⭐⭐⭐⭐</td>
+                            </tr>
+                            <tr>
+                                <th>副手</th>
+                                <td>攻击力、命中率</td>
+                                <td>⭐⭐⭐⭐</td>
+                            </tr>
+                            <tr>
+                                <th>头盔/护肩</th>
+                                <td>全属性、力量</td>
+                                <td>⭐⭐⭐⭐</td>
+                            </tr>
+                            <tr>
+                                <th>防具</th>
+                                <td>防御力、血量、暴击伤害</td>
+                                <td>⭐⭐⭐</td>
+                            </tr>
+                            <tr>
+                                <th>饰品</th>
+                                <td>攻击力、属性强化</td>
+                                <td>⭐⭐⭐⭐</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p style="margin-top: 15px; font-size: 0.9rem; color: #666;">*注：装备选择应结合当前版本的版本强势装备（如神兵、神器等）进行调整，优先保证核心输出属性。</p>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Right Column: Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-widget">
+                <h3>热门标签</h3>
+                <div class="tag-cloud">
+                    <a href="#" class="tag">战神加点</a>
+                    <a href="#" class="tag">战神连招</a>
+                    <a href="#" class="tag">战神装备</a>
+                    <a href="#" class="tag">战神攻略</a>
+                    <a href="#" class="tag">战神PVP</a>
+                    <a href="#" class="tag">战神练级</a>
+                    <a href="#" class="tag">战神转职</a>
+                    <a href="#" class="tag">战神技能</a>
+                </div>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>新手必读</h3>
+                <div class="build-option">
+                    <h4>转职顺序</h4>
+                    <p>战神转职需要依次完成：见习战神 -> 战士 -> 战神。需完成指定任务并达到等级要求。</p>
+                </div>
+                <div class="build-option">
+                    <h4>加点误区</h4>
+                    <p>不要盲目堆砌单一属性，注意力量与敏捷的比例，确保技能释放流畅。</p>
+                </div>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>最新资讯</h3>
+                <ul style="font-size: 0.9rem; line-height: 2;">
+                    <li><a href="#">[更新] 12.0版本战神平衡性调整</a></li>
+                    <li><a href="#">[攻略] 新手战神前100级快速练级路线</a></li>
+                    <li><a href="#">[资讯] 2023年全服战神排行榜TOP10</a></li>
+                    <li><a href="#">[活动] 冒险岛周年庆战神专属道具</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<!-- FAQ Section -->
+<section id="faq" class="container">
+    <h2 class="section-title">常见问题 (FAQ)</h2>
+    <div class="card">
+        <div class="faq-item active">
+            <div class="faq-question">战神适合新手玩吗？</div>
+            <div class="faq-answer">
+                战神上手相对简单，技能释放流畅，且有较强的生存能力，非常适合新手玩家。不过随着游戏进程，对装备和操作的依赖会逐渐增加。
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">力量型和敏捷型战神哪个更强？</div>
+            <div class="faq-answer">
+                这取决于你的游戏风格。力量型单体爆发高，适合追求极限输出的玩家；敏捷型生存能力强，适合喜欢操作和群怪的玩家。在高端团本中，装备差距往往大于加点差距。
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">战神如何提升伤害？</div>
+            <div class="faq-answer">
+                提升伤害的途径主要有：更换更高级的装备、强化/增幅装备、镶嵌宝石、提升技能等级以及优化属性加点。此外，熟练的连招技巧也能显著提高输出效率。
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于战神攻略网</h4>
+                <p style="font-size: 0.9rem; color: #888;">本站致力于为冒险岛玩家提供最详尽、最准确的战神职业攻略。无论是练级、PK还是打BOSS，这里都有你需要的答案。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#">技能加点大全</a></li>
+                    <li><a href="#">装备属性查询</a></li>
+                    <li><a href="#">职业对比评测</a></li>
+                    <li><a href="#">新手入门指南</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>联系我们</h4>
+                <ul>
+                    <li><a href="#">投稿建议</a></li>
+                    <li><a href="#">商务合作</a></li>
+                    <li><a href="#">玩家交流群</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 战神攻略网. All rights reserved. 冒险岛及相关商标均为Nexon公司所有。</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Simple Interaction for Skill List
+    function showSkillDetail(name, desc) {
+        const detailBox = document.getElementById('skill-detail');
+        const detailText = document.getElementById('skill-text');
+        
+        detailBox.style.display = 'block';
+        detailText.textContent = `${name}：${desc}`;
+        
+        // Scroll to detail box slightly
+        detailBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    // FAQ Toggle Logic
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        item.querySelector('.faq-question').addEventListener('click', () => {
+            // Close others
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) otherItem.classList.remove('active');
+            });
+            // Toggle current
+            item.classList.toggle('active');
+        });
+    });
+
+    // Smooth Scroll for Navigation Links
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
