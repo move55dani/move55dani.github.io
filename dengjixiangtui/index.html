@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登机箱推荐-专业出行装备选购指南与评测</title>
+    <meta name="description" content="本站提供详尽的登机箱推荐指南，涵盖大容量登机箱、拉杆箱品牌对比、尺寸选择技巧、材质硬度测试及不同旅行场景的行李箱选购建议。">
+    <meta name="keywords" content="登机箱推荐,拉杆箱,旅行箱,登机箱品牌,行李箱评测,大容量登机箱,行李箱选购指南">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --secondary-color: #f8fafc;
+            --text-main: #1e293b;
+            --text-sub: #64748b;
+            --border-color: #e2e8f0;
+            --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: #ffffff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-sub);
+            transition: var(--transition);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .cta-btn:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--text-sub);
+            margin-bottom: 30px;
+        }
+
+        .search-box {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .search-box button {
+            background-color: var(--text-main);
+            color: white;
+            border: none;
+            padding: 0 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        /* Features Grid */
+        .features {
+            padding: 60px 20px;
+            background: #fff;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-sub);
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            padding: 30px;
+            border-radius: 12px;
+            background: var(--secondary-color);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--card-shadow);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+        }
+
+        .feature-card p {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+        }
+
+        /* Guide Section */
+        .guide-section {
+            padding: 80px 20px;
+            background: #f8fafc;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .guide-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .guide-content p {
+            margin-bottom: 20px;
+            color: var(--text-sub);
+        }
+
+        .checklist {
+            margin-top: 20px;
+        }
+
+        .checklist li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            color: var(--text-main);
+        }
+
+        .checklist li::before {
+            content: "✓";
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .guide-image {
+            background: #e2e8f0;
+            border-radius: 12px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-sub);
+            font-size: 1.2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .guide-image::after {
+            content: "图示：不同材质的行李箱侧视图对比";
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 5px 10px;
+            font-size: 0.8rem;
+            border-radius: 4px;
+        }
+
+        /* Recommended List */
+        .recommend-section {
+            padding: 80px 20px;
+        }
+
+        .product-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            box-shadow: var(--card-shadow);
+            border-color: var(--primary-color);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            background-color: #f1f5f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #94a3b8;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-tag {
+            font-size: 0.75rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .product-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .product-desc {
+            color: var(--text-sub);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .product-specs {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            font-size: 0.85rem;
+            color: var(--text-sub);
+        }
+
+        .spec-item {
+            background: var(--secondary-color);
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border-color);
+            padding-top: 16px;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .price span {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: var(--text-sub);
+        }
+
+        .btn-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .btn-link:hover {
+            text-decoration: underline;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 80px 20px;
+            background: var(--secondary-color);
+        }
+
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        details {
+            background: white;
+            margin-bottom: 16px;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            cursor: pointer;
+        }
+
+        summary {
+            font-weight: 600;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: "+";
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            transition: transform 0.2s;
+        }
+
+        details[open] summary::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            margin-top: 16px;
+            color: var(--text-sub);
+            padding-top: 16px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Footer */
+        footer {
+            background: #1e293b;
+            color: #94a3b8;
+            padding: 60px 20px 20px;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 20px;
+            border-top: 1px solid #334155;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 15px;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .guide-image {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="9" y1="3" x2="9" y2="21"></line>
+                </svg>
+                <span>TravelGear</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#guide" class="active">选购指南</a></li>
+                    <li><a href="#products">热门推荐</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#products" class="cta-btn">查看推荐</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>告别行李焦虑，轻松规划你的每一次出行</h1>
+                <p>无论商务差旅还是度假旅行，找到最适合你的登机箱，是舒适旅程的第一步。</p>
+                <div class="search-box">
+                    <input type="text" placeholder="搜索品牌、尺寸或功能（如：防摔、静音）...">
+                    <button>搜索</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Factors -->
+        <section class="features">
+            <div class="section-container">
+                <div class="section-title">
+                    <h2>如何挑选合适的登机箱？</h2>
+                    <p>关注以下四个核心维度，快速锁定目标产品</p>
+                </div>
+                <div class="grid-3">
+                    <div class="feature-card">
+                        <div class="feature-icon">📏</div>
+                        <h3>尺寸合规</h3>
+                        <p>国内航班通常允许20寸（约55x40x20cm），国际航班多限制22寸或24寸。确保尺寸符合随身携带标准。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>材质硬度</h3>
+                        <p>PC硬壳更抗摔耐用，PC+ABS材质兼顾韧性与硬度；软壳则更轻便但保护性稍弱。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🛠️</div>
+                        <h3>拉杆与万向轮</h3>
+                        <p>选择多档位（2-4档）拉杆，四轮万向轮（360度旋转）能大幅提升推拉顺滑度，减轻手臂负担。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide & Comparison -->
+        <section id="guide" class="guide-section">
+            <div class="section-container">
+                <div class="guide-grid">
+                    <div class="guide-content">
+                        <h2>不同材质与功能的深度解析</h2>
+                        <p>市面上的登机箱种类繁多，了解它们的特性能帮你做出更明智的决定。</p>
+                        
+                        <h3>1. 硬壳登机箱 (PC/ABS)</h3>
+                        <p style="margin-bottom: 15px;">外观时尚，抗压性强，能有效保护内部衣物。适合经常需要托运或放置易碎物品的旅客。</p>
+                        
+                        <h3>2. 软壳登机箱 (尼龙/帆布)</h3>
+                        <p style="margin-bottom: 15px;">重量轻，容量可拉伸，外观多样化。适合短途旅行或对重量敏感的背包客。</p>
+
+                        <h3>3. 电池携带限制</h3>
+                        <p style="margin-bottom: 15px;">出于航空安全考虑，锂电池通常只能随身携带，不能托运。请务必确认箱体是否有独立的锂电池仓。</p>
+
+                        <ul class="checklist">
+                            <li>检查拉杆顺滑度（上下升降、左右伸缩）</li>
+                            <li>测试万向轮在地面上的顺滑度及静音效果</li>
+                            <li>确认箱体锁具的安全性（TSA认证锁更方便过安检）</li>
+                        </ul>
+                    </div>
+                    <div class="guide-image">
+                        <!-- Placeholder for visual representation -->
+                        <div style="text-align:center;">
+                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#cbd5e1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                            <p style="margin-top:10px; color:#94a3b8;">材质与结构示意图</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommended Products -->
+        <section id="products" class="recommend-section">
+            <div class="section-container">
+                <div class="section-title">
+                    <h2>2024年热门登机箱推荐</h2>
+                    <p>综合口碑、耐用性与性价比，精选以下几款值得入手的登机箱</p>
+                </div>
+                <div class="grid-3">
+                    <!-- Product 1 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <div style="background:#e2e8f0; width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
+                                <span style="color:#94a3b8;">PC硬壳产品图</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-tag">商务首选</div>
+                            <h3 class="product-title">瑞动 20寸商务登机箱</h3>
+                            <p class="product-desc">采用高韧性PC材质，360度静音万向轮，TSA密码锁。设计简约，适合商务人士短途差旅。</p>
+                            <div class="product-specs">
+                                <span class="spec-item">20寸</span>
+                                <span class="spec-item">PC硬壳</span>
+                                <span class="spec-item">静音轮</span>
+                            </div>
+                            <div class="product-footer">
+                                <div class="price">¥599 <span>/起</span></div>
+                                <a href="#" class="btn-link">查看详情</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 2 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <div style="background:#e2e8f0; width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
+                                <span style="color:#94a3b8;">软壳产品图</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-tag">轻量休闲</div>
+                            <h3 class="product-title">新秀丽 22寸休闲旅行箱</h3>
+                            <p class="product-desc">经典尼龙面料，具备弹性空间，可容纳更多衣物。外观时尚，适合周末度假或情侣出游。</p>
+                            <div class="product-specs">
+                                <span class="spec-item">22寸</span>
+                                <span class="spec-item">尼龙软壳</span>
+                                <span class="spec-item">轻便</span>
+                            </div>
+                            <div class="product-footer">
+                                <div class="price">¥899 <span>/起</span></div>
+                                <a href="#" class="btn-link">查看详情</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 3 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <div style="background:#e2e8f0; width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
+                                <span style="color:#94a3b8;">收纳产品图</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-tag">收纳神器</div>
+                            <h3 class="product-title">日默瓦 24寸登机箱</h3>
+                            <p class="product-desc">航空级铝镁合金框架，质感极佳。内部分区合理，附带收纳袋，让物品井井有条。</p>
+                            <div class="product-specs">
+                                <span class="spec-item">24寸</span>
+                                <span class="spec-item">铝框</span>
+                                <span class="spec-item">高端</span>
+                            </div>
+                            <div class="product-footer">
+                                <div class="price">¥16,800 <span>/起</span></div>
+                                <a href="#" class="btn-link">查看详情</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="section-container">
+                <div class="section-title">
+                    <h2>常见问题解答</h2>
+                    <p>关于登机箱选购与使用的疑问汇总</p>
+                </div>
+                <div class="faq-grid">
+                    <details>
+                        <summary>登机箱的尺寸标准是什么？</summary>
+                        <div class="faq-answer">
+                            <p>根据国际航空运输协会（IATA）的规定，大多数航空公司的随身行李尺寸限制为：长宽高之和不超过115厘米（45寸）。常见尺寸为20寸（约55x40x20cm）和22寸（约56x36x23cm），一般能顺利通过安检并放入飞机上方的行李架。</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>TSA密码锁有什么用？</summary>
+                        <div class="faq-answer">
+                            <p>TSA（美国运输安全管理局）认证锁允许安检人员在需要时使用专用工具打开锁具而不损坏锁具。如果您经常飞往美国或需要经过美国转机，建议选择带有TSA锁的箱子，以免行李被强行剪断锁扣。</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>登机箱应该买硬壳还是软壳？</summary>
+                        <div class="faq-answer">
+                            <p>这取决于您的出行习惯。硬壳（PC/ABS）抗摔、防尘、抗压，适合经常托运或携带易碎物品；软壳（尼龙/帆布）重量轻、容量可拉伸、外观多样，适合短途或对重量敏感的旅客。</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>万向轮是必须的吗？</summary>
+                        <div class="faq-answer">
+                            <p>虽然双轮（定向轮）在平地上推拉更省力，但四轮万向轮（360度旋转）能让你在转弯或通过狭窄过道时更加灵活，减少对箱体的侧向压力，是目前主流登机箱的标配。</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <p style="font-size: 0.9rem; line-height: 1.6;">
+                    TravelGear 致力于为旅行者提供最客观、实用的行李箱选购指南。我们通过实地测试和用户反馈，筛选出高品质的出行装备。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>选购指南</h4>
+                <ul>
+                    <li><a href="#">尺寸对照表</a></li>
+                    <li><a href="#">材质硬度测试</a></li>
+                    <li><a href="#">拉杆类型解析</a></li>
+                    <li><a href="#">品牌排行榜</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>帮助中心</h4>
+                <ul>
+                    <li><a href="#">使用条款</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                    <li><a href="#">联系我们</a></li>
+                    <li><a href="#">加入我们</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>订阅更新</h4>
+                <p style="font-size: 0.85rem; margin-bottom: 10px;">获取最新的旅行装备资讯和优惠信息。</p>
+                <div style="display: flex;">
+                    <input type="email" placeholder="您的邮箱" style="padding: 8px; border: none; border-radius: 4px 0 0 4px; width: 100%;">
+                    <button style="padding: 8px 12px; background: var(--primary-color); border: none; color: white; border-radius: 0 4px 4px 0; cursor: pointer;">→</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 TravelGear 选购指南. 保留所有权利。</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+  </html>
