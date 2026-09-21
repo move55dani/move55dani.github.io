@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>松林谷-自然生态与户外休闲旅游指南</title>
+    <meta name="description" content="松林谷提供专业的自然生态旅游指南、户外徒步路线推荐、森林康养资讯及生态摄影分享，帮助您规划亲近自然的完美旅程。">
+    <meta name="keywords" content="松林谷,森林旅游,自然生态,户外徒步,森林康养,生态摄影">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2d4a3e;
+            --secondary-color: #5c8a75;
+            --accent-color: #d4a373;
+            --bg-light: #f4f7f5;
+            --text-main: #333333;
+            --text-light: #666666;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-light);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--secondary-color);
+        }
+
+        .nav-cta {
+            background-color: var(--secondary-color);
+            color: var(--white) !important;
+            padding: 8px 20px;
+            border-radius: 20px;
+        }
+
+        .nav-cta:hover {
+            background-color: var(--primary-color);
+            color: var(--white) !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(45, 74, 62, 0.7), rgba(45, 74, 62, 0.5)), url('https://picsum.photos/seed/forest/1920/800.jpg') center/cover no-repeat;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 163, 115, 0.4);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--white);
+            color: var(--white);
+            margin-left: 10px;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        /* Route Section */
+        .route-section {
+            background-color: var(--white);
+        }
+
+        .route-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .route-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid #eee;
+        }
+
+        .route-img {
+            height: 200px;
+            width: 100%;
+        }
+
+        .route-content {
+            padding: 20px;
+        }
+
+        .route-tag {
+            background-color: rgba(92, 138, 117, 0.1);
+            color: var(--secondary-color);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .route-content h3 {
+            margin: 10px 0;
+            font-size: 1.25rem;
+        }
+
+        .route-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        /* Ecology/Info Section */
+        .eco-section {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .eco-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .eco-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .eco-text h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .eco-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .eco-list li::before {
+            content: '🌿';
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .eco-visual {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+
+        .eco-visual img {
+            border-radius: var(--radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--bg-light);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 20px;
+        }
+
+        .faq-item {
+            background: var(--white);
+            padding: 20px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .faq-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .faq-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a2e26;
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+                margin-top: 15px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .btn {
+                display: block;
+                margin: 10px 0 0 0;
+                width: 100%;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">🌲 <span>松林谷</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#routes" class="active">徒步路线</a></li>
+                    <li><a href="#ecology">生态资讯</a></li>
+                    <li><a href="#guide">游玩指南</a></li>
+                    <li><a href="#contact" class="nav-cta">预约体验</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>探索静谧的绿色秘境</h1>
+                <p>松林谷致力于为您提供最专业的自然生态旅游服务，包括森林徒步、生态摄影及森林康养体验。远离城市喧嚣，回归自然怀抱。</p>
+                <div class="hero-btns">
+                    <a href="#routes" class="btn btn-primary">开始探索</a>
+                    <a href="#guide" class="btn btn-outline">阅读指南</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="section">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🥾</div>
+                        <h3>专业徒步路线</h3>
+                        <p>精心规划的多条难度等级徒步线路，适合家庭出游与专业探险，配备完善的安全指引。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📷</div>
+                        <h3>生态摄影天堂</h3>
+                        <p>在绝佳的光线与构图下记录自然之美，定期举办摄影采风活动，分享光影艺术。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🧘</div>
+                        <h3>森林康养体验</h3>
+                        <p>结合传统中医与现代自然疗法，提供森林浴、冥想课程及健康膳食，舒缓身心压力。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🦌</div>
+                        <h3>野生动物观测</h3>
+                        <p>在保护区内安全观测珍稀动植物，学习生态保护知识，参与志愿者守护行动。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Routes Section -->
+        <section id="routes" class="section route-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>热门徒步路线</h2>
+                    <p>每一条路线都经过实地勘测，确保安全与风景并存</p>
+                </div>
+                <div class="route-grid">
+                    <article class="route-card">
+                        <img src="https://picsum.photos/seed/forest1/400/300" alt="云杉小径" class="route-img">
+                        <div class="route-content">
+                            <span class="route-tag">经典路线</span>
+                            <h3>云杉小径</h3>
+                            <p>全长5公里，全程平缓，适合初学者及家庭亲子游。沿途可欣赏高大的云杉林与清澈溪流。</p>
+                            <div class="route-meta">
+                                <span>⏱️ 耗时: 2-3小时</span>
+                                <span>⭐ 难度: 简单</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="route-card">
+                        <img src="https://picsum.photos/seed/mountain/400/300" alt="松林峰" class="route-img">
+                        <div class="route-content">
+                            <span class="route-tag">挑战路线</span>
+                            <h3>松林峰攀登</h3>
+                            <p>全长12公里，包含连续爬升，挑战自我极限。登顶后可俯瞰整个松林谷全景。</p>
+                            <div class="route-meta">
+                                <span>⏱️ 耗时: 5-6小时</span>
+                                <span>⭐ 难度: 中等</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="route-card">
+                        <img src="https://picsum.photos/seed/lake/400/300" alt="镜湖环线" class="route-img">
+                        <div class="route-content">
+                            <span class="route-tag">摄影专线</span>
+                            <h3>镜湖环线</h3>
+                            <p>全长8公里，以镜面般的湖水和倒影闻名。最佳观赏时间为清晨与黄昏。</p>
+                            <div class="route-meta">
+                                <span>⏱️ 耗时: 3-4小时</span>
+                                <span>⭐ 难度: 简单</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ecology/Info Section -->
+        <section id="ecology" class="section eco-section">
+            <div class="container eco-container">
+                <div class="eco-text">
+                    <h2>守护绿色家园</h2>
+                    <p style="margin-bottom: 20px; opacity: 0.9;">松林谷不仅是一个旅游目的地，更是一个生态教育基地。我们坚持“无痕山林”原则，保护这片珍贵的森林资源。</p>
+                    <ul class="eco-list">
+                        <li><strong>生态修复：</strong> 定期开展森林病虫害防治与植被补种工作。</li>
+                        <li><strong>科普教育：</strong> 设置自然观察站，向游客普及生物多样性知识。</li>
+                        <li><strong>可持续运营：</strong> 所有设施均采用环保材料，垃圾实现100%分类回收。</li>
+                    </ul>
+                </div>
+                <div class="eco-visual">
+                    <img src="https://picsum.photos/seed/forest2/600/400" alt="松林谷生态保护">
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section id="guide" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>游玩指南与须知</h2>
+                    <p>为了让您的松林谷之旅更加顺畅愉快，请阅读以下实用信息</p>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h4>最佳游览季节是何时？</h4>
+                        <p>春季（4-6月）万物复苏，百花盛开；秋季（9-11月）层林尽染，红叶满山，景色最为壮丽。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>需要提前预约吗？</h4>
+                        <p>为了控制游客流量并确保服务质量，建议您在节假日及周末提前通过官网或电话进行预约。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>可以携带宠物吗？</h4>
+                        <p>为了保护野生动物安全，除导盲犬外，禁止携带宠物进入核心保护区。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>山上提供餐饮服务吗？</h4>
+                        <p>在观景台附近设有休息区，提供简餐、咖啡及特色野果饮品，但种类有限，建议自备干粮。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>🌲 关于松林谷</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">
+                        松林谷是一个集生态旅游、科普教育、森林康养于一体的综合性自然景区。我们致力于让更多人亲近自然，热爱自然。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#routes">徒步路线</a></li>
+                        <li><a href="#ecology">生态资讯</a></li>
+                        <li><a href="#guide">游客须知</a></li>
+                        <li><a href="#">会员中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>📞 咨询热线：400-123-4567</li>
+                        <li>📧 邮箱：info@songlinggu.com</li>
+                        <li>📍 地址：中国·XX省XX市松林谷风景区</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 松林谷旅游服务有限公司 版权所有 | 保留所有权利</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
