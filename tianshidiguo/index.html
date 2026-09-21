@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="天使帝国3 - 全面的游戏资料库与攻略指南。包含游戏背景、角色图鉴、职业系统解析、剧情流程攻略及战斗技巧，助您轻松征服伊甸园。">
+    <meta name="keywords" content="天使帝国3, 天使帝国3攻略, 天使帝国3图鉴, 天使帝国3下载, 天使帝国3职业, 天使帝国3剧情">
+    <title>天使帝国3-游戏资料库与通关攻略指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8b5cf6; /* 神圣紫 */
+            --secondary-color: #d8b4fe; /* 浅紫 */
+            --accent-color: #f59e0b; /* 金色光辉 */
+            --text-main: #1f2937;
+            --text-light: #6b7280;
+            --bg-body: #f9fafb;
+            --bg-card: #ffffff;
+            --border-radius: 12px;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 顶部导航 */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, #eef2ff 0%, #fae8ff 100%);
+            padding: 80px 0;
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 4px 14px 0 rgba(139, 92, 246, 0.39);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px 0 rgba(139, 92, 246, 0.23);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* 核心内容区 */
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        /* 卡片样式 */
+        .card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(0,0,0,0.02);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background-color: #e5e7eb;
+        }
+
+        .card-body {
+            padding: 24px;
+        }
+
+        .card-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            background-color: #f3f4f6;
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .card-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* 角色图鉴 */
+        .character-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .char-card {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid #f3f4f6;
+        }
+
+        .char-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            object-fit: cover;
+            border: 3px solid var(--secondary-color);
+        }
+
+        .char-name {
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .char-role {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* 攻略列表 */
+        .guide-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .guide-item {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            transition: background 0.2s;
+        }
+
+        .guide-item:hover {
+            background-color: #fafafa;
+        }
+
+        .guide-number {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #e5e7eb;
+            margin-right: 20px;
+            min-width: 50px;
+        }
+
+        .guide-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+
+        .guide-content p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* 特色板块 */
+        .feature-section {
+            background-color: white;
+            padding: 60px 0;
+            margin-bottom: 60px;
+        }
+
+        .feature-box {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .feature-box:last-child {
+            margin-bottom: 0;
+        }
+
+        .feature-box:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .feature-img {
+            flex: 1;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .feature-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .feature-text {
+            flex: 1;
+        }
+
+        .feature-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .feature-text p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #1f2937;
+            color: #d1d5db;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #374151;
+            font-size: 0.9rem;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                display: none; /* 简化处理，移动端隐藏菜单 */
+            }
+
+            .feature-box {
+                flex-direction: column;
+            }
+
+            .feature-box:nth-child(even) {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>天使帝国3</span> Wiki
+            </a>
+            <nav class="nav-links">
+                <a href="#" class="active">首页</a>
+                <a href="#guide">攻略指南</a>
+                <a href="#characters">角色图鉴</a>
+                <a href="#mechanics">系统机制</a>
+                <a href="#faq">常见问题</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>征服伊甸园，<br>书写<span>天使帝国3</span>的史诗篇章</h1>
+                <p>全方位的游戏资料库，涵盖角色培养、职业进阶、隐藏剧情及BOSS战技巧。无论是新手入门还是通关挑战，这里都有您需要的所有攻略。</p>
+                <div class="cta-buttons">
+                    <a href="#guide" class="btn btn-primary">开始阅读攻略</a>
+                    <a href="#characters" class="btn btn-outline">查看角色图鉴</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- 游戏特色 -->
+            <section class="feature-section">
+                <div class="feature-box">
+                    <div class="feature-img">
+                        <img src="https://picsum.photos/seed/angel3_1/600/400" alt="天使帝国3游戏画面">
+                    </div>
+                    <div class="feature-text">
+                        <h3>经典的SRPG回合制体验</h3>
+                        <p>《天使帝国3》延续了前作的经典玩法，在保留回合制策略深度的同时，引入了更为丰富的职业系统和技能树。玩家需要合理搭配天使与人类的兵种，利用地形优势，制定精妙的战术来击败强大的敌人。</p>
+                        <p>游戏拥有精致的2D画面和感人至深的剧情，讲述了神与魔、天使与人类之间错综复杂的纠葛。</p>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-img">
+                        <img src="https://picsum.photos/seed/angel3_2/600/400" alt="天使帝国3战斗画面">
+                    </div>
+                    <div class="feature-text">
+                        <h3>深度职业转职系统</h3>
+                        <p>游戏中的角色拥有多种职业分支，通过战斗获得经验升级，并在达到特定等级后转职为更强大的形态。从基础战士到精通魔法的法师，每个分支都有独特的技能和成长路线。</p>
+                        <p>善用转职系统，培养您的专属王牌，是通关高难度关卡的关键。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 热门攻略 -->
+            <section id="guide">
+                <div class="section-title">
+                    <h2>热门攻略与指南</h2>
+                    <p>精选玩家最关心的通关技巧与难点解析</p>
+                </div>
+                <div class="grid-3">
+                    <article class="card">
+                        <div class="card-body">
+                            <span class="card-tag">新手必读</span>
+                            <h3 class="card-title">天使帝国3 新手入门指南</h3>
+                            <p class="card-desc">详细解析初始队伍配置、资源获取方式以及游戏的基本操作，帮助您快速上手游戏。</p>
+                            <a href="#" class="card-link">阅读全文 &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-body">
+                            <span class="card-tag">BOSS战</span>
+                            <h3 class="card-title">最终BOSS 完美通关打法</h3>
+                            <p class="card-desc">针对最终关卡的怪物特性，提供具体的站位建议、技能释放时机及装备推荐。</p>
+                            <a href="#" class="card-link">查看战术 &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-body">
+                            <span class="card-tag">隐藏要素</span>
+                            <h3 class="card-title">全隐藏剧情与彩蛋触发</h3>
+                            <p class="card-desc">揭秘游戏中所有隐藏的对话选项和特殊事件，不要错过任何一段感人剧情。</p>
+                            <a href="#" class="card-link">探索彩蛋 &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 角色图鉴 -->
+            <section id="characters">
+                <div class="section-title">
+                    <h2>角色图鉴</h2>
+                    <p>了解每一位天使战士的背景与能力</p>
+                </div>
+                <div class="character-grid">
+                    <div class="char-card">
+                        <img src="https://picsum.photos/seed/char1/100/100" alt="天使" class="char-avatar">
+                        <div class="char-name">米迦勒</div>
+                        <div class="char-role">剑圣 / 突击手</div>
+                    </div>
+                    <div class="char-card">
+                        <img src="https://picsum.photos/seed/char2/100/100" alt="天使" class="char-avatar">
+                        <div class="char-name">加百列</div>
+                        <div class="char-role">弓箭手 / 远程</div>
+                    </div>
+                    <div class="char-card">
+                        <img src="https://picsum.photos/seed/char3/100/100" alt="天使" class="char-avatar">
+                        <div class="char-name">拉斐尔</div>
+                        <div class="char-role">治疗师 / 辅助</div>
+                    </div>
+                    <div class="char-card">
+                        <img src="https://picsum.photos/seed/char4/100/100" alt="人类" class="char-avatar">
+                        <div class="char-name">雷恩</div>
+                        <div class="char-role">骑士 / 防御</div>
+                    </div>
+                    <div class="char-card">
+                        <img src="https://picsum.photos/seed/char5/100/100" alt="人类" class="char-avatar">
+                        <div class="char-name">艾莉亚</div>
+                        <div class="char-role">法师 / 破法</div>
+                    </div>
+                    <div class="char-card">
+                        <img src="https://picsum.photos/seed/char6/100/100" alt="魔兽" class="char-avatar">
+                        <div class="char-name">魔龙</div>
+                        <div class="char-role">BOSS / 毁灭</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 系统机制 -->
+            <section id="mechanics">
+                <div class="section-title">
+                    <h2>系统机制详解</h2>
+                    <p>深入理解战斗数值与成长要素</p>
+                </div>
+                <div class="guide-list">
+                    <a href="#" class="guide-item">
+                        <span class="guide-number">01</span>
+                        <div class="guide-content">
+                            <h3>兵种相克关系</h3>
+                            <p>了解剑士、斧手、弓箭手之间的克制链，以及魔法对物理单位的特殊效果。</p>
+                        </div>
+                    </a>
+                    <a href="#" class="guide-item">
+                        <span class="guide-number">02</span>
+                        <div class="guide-content">
+                            <h3>技能树与天赋</h3>
+                            <p>解析战斗中获得的技能点如何分配，以及不同天赋对战斗数值的影响。</p>
+                        </div>
+                    </a>
+                    <a href="#" class="guide-item">
+                        <span class="guide-number">03</span>
+                        <div class="guide-content">
+                            <h3>装备强化与合成</h3>
+                            <p>收集素材，强化武器与防具，打造属于你的神装。</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于本站</h4>
+                    <p>本站为《天使帝国3》玩家社区，致力于提供最全面的游戏攻略、角色图鉴及系统解析。内容仅供参考，请以游戏实际内容为准。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#guide">攻略中心</a></li>
+                        <li><a href="#characters">角色图鉴</a></li>
+                        <li><a href="#mechanics">系统机制</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关资源</h4>
+                    <ul>
+                        <li><a href="#">官方论坛</a></li>
+                        <li><a href="#">游戏下载</a></li>
+                        <li><a href="#">更新日志</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 天使帝国3 Wiki. All rights reserved. 本站非官方网站，内容由社区用户维护。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
